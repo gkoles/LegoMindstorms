@@ -5,6 +5,7 @@ from ev3dev.auto import *
 # Wind Left Motor
 def wind_left(lmotor):
 
+    direction = 1
     reverse = -1
     # interval = 900000
     interval = 3000
@@ -19,16 +20,11 @@ def wind_left(lmotor):
 
         #Test program execution
         motor.wait_while('running')
-        Sound.beep()
+        sleep(0.1)
 
         # Counter clockwise cycle
         lmotor.run_timed(speed_sp = speed * reverse, time_sp = interval)
-
-
-        #Test program execution
-        motor.wait_while('running')
-        Sound.speak()
-
+        
         counter -= 1
 
     return
