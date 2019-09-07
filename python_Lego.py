@@ -24,9 +24,9 @@ def wind_left(lmotor):
 
         # Counter clockwise cycle
         lmotor.run_timed(speed_sp = speed * reverse, time_sp = interval)
-        
-        counter -= 1
 
+        counter -= 1
+        
     return
 
 
